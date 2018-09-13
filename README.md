@@ -2,10 +2,10 @@
 
 Group number: 
 Team members: Tuhina Dasgupta, Sarah Morin, Selin Onal  
-Individual questions:
-*Tuhina: 1, 4, 7, 10, 13
-*Selin: 2, 5, 8, 11, 14
-*Sarah: 3, 6, 9, 12, 15
+Individual questions:  
+*Tuhina: 1, 4, 7, 10, 13  
+*Selin: 2, 5, 8, 11, 14  
+*Sarah: 3, 6, 9, 12, 15  
 
 In this assignment you will examine a program consisting of a number of functions - labelled ques1.c to ques15.c -- each of which tests your knowledge of bitwise C operations. Your goal is to determine what each function does and if there
 is a simpler way to implement the function. There are two parts to the requirements. 
