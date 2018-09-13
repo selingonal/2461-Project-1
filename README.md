@@ -20,21 +20,22 @@ To run the code to test your function, you will need to insert appropriate C cod
 
  As an example, consider the answers to function ques0 - which you worked out in class.
 
- ## HANDIN Instructions: You must write out your answers to Part A in a report to be submitted (as a tarfile or zipfile, along with your code) - in addition to the report, you can include comments in your code that may provide a secondary explanation (in case
- your report has errors). You MUST provide an explanation for what the function does and justify your answer. Simply providing an example is NOT an explanation - so don't expect any credit if
- your answers are simply a collection of examples or code comments. You are welcome to provide formal proofs where appropriate, but use your judgement on whether to pursue a formal proof or not. It is preferable to write your answers as comments in the code - but do not feel pressured to do so.
- For part B, write out your code in this file with the answer (a simpler code if it exists) after each of the assigned functions in a manner similar to the example shown in ques0.c (i.e., the answer to function ques7.c should be named ans7.c).
+## HANDIN Instructions:  
 
-## IMPORTANT: The code you submit must compile correctly (using gcc). If the code you submit does not compile without errors, you will get a zero for Part B of this project.##
+* You must write out your answers to Part A in a report to be submitted (as a tarfile or zipfile, along with your code) - in addition to the report, you can include comments in your code that may provide a secondary explanation (in case your report has errors).  
+ 
+* You MUST provide an explanation for what the function does and justify your answer. Simply providing an example is NOT an explanation - so don't expect any credit if your answers are simply a collection of examples or code comments. You are welcome to provide formal proofs where appropriate, but use your judgement on whether to pursue a formal proof or not. It is preferable to write your answers as comments in the code - but do not feel pressured to do so.
+* For part B, write out your code in this file with the answer (a simpler code if it exists) after each of the assigned functions in a manner similar to the example shown in ques0.c (i.e., the answer to function ques7.c should be named ans7.c).
 
- ## GRADING: Each question has a specific number of points (i.e., not all questions have the same level of difficulty). Your grade will be based on the correctness of your answer, expressing the answer as a logical function where possible, and the efficiency and readability of your rewritten code. ##
+**IMPORTANT: The code you submit must compile correctly (using gcc). If the code you submit does not compile without errors, you will get a zero for Part B of this project.**
 
-## Collaboration: You can discuss the project with your teammate. You CANNOT refer to online sources to get help; you can refer to the C syntax documentations. Your report must include names of both members of the team -- failure to do so would imply you are claiming you worked on your own, and may constitute a violation of academic integrity policies. ##
+**GRADING: Each question has a specific number of points (i.e., not all questions have the same level of difficulty). Your grade will be based on the correctness of your answer, expressing the answer as a logical function where possible, and the efficiency and readability of your rewritten code. **
+
+**Collaboration: You can discuss the project with your teammate. You CANNOT refer to online sources to get help; you can refer to the C syntax documentations. Your report must include names of both members of the team -- failure to do so would imply you are claiming you worked on your own, and may constitute a violation of academic integrity policies.** 
 
  EXAMPLE:  
- this function is similar to CallMeLast in the inclass exercises  
- function ques0 returns 1 if x=y and returns 0 if x is not equal to y  
- the function ans0 does the same in two C statements  
+this function is similar to CallMeLast in the inclass exercises function ques0 returns 1 if x=y and returns 0 if x is not equal to y the function ans0 does the same in two C statements 
+ 
 ```
 int ques0(int x, int y){
     int temp;
@@ -56,7 +57,7 @@ int ans0(int x, int y){
 
 ## QUESTIONS
 
-## question 1:  ##
+**question 1:  **
 ```
 int ques1(int x) {
     int z;
@@ -69,7 +70,7 @@ int ques1(int x) {
 }
 ```
 
-## question 2:  ##
+**question 2:  **
 ```
 int ques2(x) {
     int mask = x>>31;
@@ -79,7 +80,7 @@ int ques2(x) {
     return (y+z);
 }
 ``` 
-## question 3: ## 
+**question 3: **
 ```
 int ques3(int x){
     int y = !x;
@@ -89,7 +90,7 @@ int ques3(int x){
     return !z;
 }
 ``` 
-## question 4:  ##
+**question 4:  **
 ```
 // Assume 0 <= n <= 32
 int ques4(int n) {
@@ -102,7 +103,7 @@ int ques4(int n) {
 }
 ```
 
-## question 5:  ##
+**question 5:  **
 ```
 int ques5(int x) {
     int result = (x<<31);
@@ -112,7 +113,7 @@ int ques5(int x) {
 
 }
 ```
-## question 6:  ##
+**question 6:  **
 ```
 int ques6(void) {
     int byte = 0x55;
@@ -122,7 +123,7 @@ int ques6(void) {
 }
 ```
 
-## question 7:  ##
+**question 7:  **
 ```
 int ques7(int x) {
 
@@ -130,7 +131,7 @@ int ques7(int x) {
 }
 ```
 
-## question 8:  ##
+**question 8:  **
 ```
 int ques8(int x) {
     int y = x >> 31;
@@ -140,7 +141,7 @@ int ques8(int x) {
 }
 ```
 
-## question 9:  ##
+**question 9:  **
 ```
 int ques9(int x, int n, int c) {
     int n8 = n << 3;
@@ -152,7 +153,7 @@ int ques9(int x, int n, int c) {
 }
 ```
 
-## question 10:  ##
+**question 10:  **
 ```
 int ques10(int x) {
 	int y = !!x;
@@ -162,7 +163,7 @@ int ques10(int x) {
 }
 ```
 
-## question 11:  ##
+**question 11:  **
 ```
 int ques11(int x, int y) {
 	int a = x >> 31;
@@ -172,7 +173,7 @@ int ques11(int x, int y) {
 }
 ```
 
-## question 12:  ##
+**question 12:  **
 ```
 int ques12(int x, int m, int n) {
     int a = ~m+1;
@@ -184,7 +185,7 @@ int ques12(int x, int m, int n) {
 }
 ```
 
-## question 13:  ##
+**question 13:  **
 ```
 int ques13(int x) {
 
@@ -208,7 +209,7 @@ int ques13(int x) {
 }
 ```
 
-## question 14:  ##  
+**question 14:  **  
 ``` 
 int ques14(int x) {
     int result = 0;
@@ -221,7 +222,7 @@ int ques14(int x) {
 }
 ```
 
-## question 15:  ##
+**question 15:  **
 ```
 int ques15(int x, int n) {
     /* for ques15 only, assume n is not a negative number  */
