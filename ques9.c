@@ -10,3 +10,11 @@ int ques9(int x, int n, int c) {
 
     return (z  | cshift);
 }
+
+int ans9(int x, int n, int c) {
+
+}
+
+int main () {
+	
+}

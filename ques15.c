@@ -10,3 +10,11 @@ int ques15(int x, int n) {
 
     return (z & x);
 }
+
+int ans15(int x, int n) {
+	
+}
+
+int main () {
+
+}
