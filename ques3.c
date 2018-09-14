@@ -12,7 +12,8 @@ int ques3(int x){
 int ans3(int x){
 	if(x>0){
 		return 1;
-	}else {return 0};
+	}
+	return 0;
 }
 
 int main () {
@@ -20,7 +21,7 @@ int main () {
 	int y = 0;
 	int z = -1;
 
-	printf("ques3 returns 1 if a number is greater than 0 and 0 otherwise\n 1: %d\n 0: %d\n -1: %d\n", ques3(1), ques3(0), ques3(-1));
-
+	printf("ques3 returns 1 if a number is greater than 0 and 0 otherwise\n ques3(1): %d\n ques3(0): %d\n ques3(-1): %d\n", ques3(1), ques3(0), ques3(-1));
+	printf("ans3 returns the same as ques3:\n ans3(1): %d\n ans3(0): %d\n ns3(-1): %d\n", ans3(1), ans3(0), ans3(-1));
 
 }
