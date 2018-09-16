@@ -24,4 +24,8 @@ int main () {
 	printf("ques3 returns 1 if a number is greater than 0 and 0 otherwise\n ques3(1): %d\n ques3(0): %d\n ques3(-1): %d\n", ques3(1), ques3(0), ques3(-1));
 	printf("ans3 returns the same as ques3:\n ans3(1): %d\n ans3(0): %d\n ns3(-1): %d\n", ans3(1), ans3(0), ans3(-1));
 
+	for (x=-100;x<101;x++){
+		printf("ques3(%d): %d\n", x, ques3(x));
+	}
+
 }
