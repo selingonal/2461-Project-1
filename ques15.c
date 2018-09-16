@@ -12,7 +12,7 @@ int ques15(int x, int n) {
     return (z & x);			//return bitwise and of z nd x
 }
 
-int ans15(int x, double n) {
+int ans15(int x, int n) {
 	if(x < (1 << n)){			//if x is less than 2^n, return x
 		return x;
 	}
