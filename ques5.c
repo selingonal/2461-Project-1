@@ -8,7 +8,7 @@ int ques5(int x) {
     int result = (x<<31);
   // if x is odd, result becomes 1111...1, if x is even, result is 0000...0
     result = (result >> 31);
-  // x returns -1 if odd and 0 if positive
+  // x returns -1 if odd and 0 if even
     return result;
 
 }
