@@ -20,7 +20,7 @@ int main () {
 	int x;
 	int n;
 	printf("Enter two integers: ");
-	scanf("%d %d\n", &x, &n);
-	printf("ques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d", x,n,x,n,ques15(x,n));
-	printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d", x,n,x,n,ans15(x,n));
+	scanf("%d %d", &x, &n);
+	printf("\n ques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", x,n,x,n,ques15(x,n));
+	printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", x,n,x,n,ans15(x,n));
 }

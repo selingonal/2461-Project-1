@@ -3,10 +3,11 @@
 /* question 9 */
 
 int ques9(int x, int n, int c) {
-    int n8 = n << 3;			// Set n8 eqaul to 8n
+    int n8 = n << 3;			// Set n8 eqaul to 8n (byte shift)
+    //255 largest 8 bit number, shifting by 8 bits (1 byte) at a time
     int mask = 0xff << n8;		// Set mask equal to 255 << 8n, if n>4, mask = 0, if n = 0 you get 255*2
-    int cshift = c << n8;
-    int z= (x & ~mask);
+    int cshift = c << n8;		// Set cshift equal to c << 8n, if n>4 cshift = 0, 
+    int z= (x & ~mask);			// Get everything but 8 bits (location determined by n) of x i.e. get 3/4 bytes of x
 
     return (z  | cshift);
 }
