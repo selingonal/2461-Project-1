@@ -25,6 +25,6 @@ int main () {
 	int n;
 	printf("Enter 3 integers: ");
 	scanf("%d %d %d", &x, &m, &n);
-	printf("\n ques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", x,m,n,x,m,n,ques12(x,m,n));
+	printf("\nques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", x,m,n,x,m,n,ques12(x,m,n));
 	printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", x,m,n,x,m,n,ans12(x,m,n));
 }
