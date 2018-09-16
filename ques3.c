@@ -20,7 +20,7 @@ int main () {
 	int x;
 	printf("Enter an integer: ");
 	scanf("%d", &x);
-	printf("\n ques3(%d) returns 1 if x>0: %d\n", x, ques3(x));
+	printf("\nques3(%d) returns 1 if x>0: %d\n", x, ques3(x));
 	printf("ans3(%d) returns 1 if x>0: %d\n", x, ans3(x));
 
 }
