@@ -12,16 +12,12 @@ int ques9(int x, int n, int c) {
 }
 
 int ans9(int x, int n, int c) {
-
+	return 0;
 }
 
 int main () {
 	printf("ques9(%d, %d, %d): %d\n", 0,0,0,ques9(0,0,0));
 	printf("ques9(%d, %d, %d): %d\n", 1,1,1,ques9(1,1,1));
 	printf("ques9(%d, %d, %d): %d\n", 4,4,12,ques9(4,4,12));
-	printf("ques9(%d, %d, %d): %d\n", 8,9,10,ques9(8.9.10));
-
-
-
-
+	printf("ques9(%d, %d, %d): %d\n", 8,9,10,ques9(8,9,10));
 }
