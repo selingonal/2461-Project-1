@@ -12,11 +12,11 @@ int ques15(int x, int n) {
     return (z & x);			//return bitwise and of z nd x
 }
 
-int ans15(double x, double n) {
+int ans15(int x, double n) {
 	if(x<pow(2.0,n)){			//if x is less than 2^n, return x
 		return x;
 	}
-	return (x%(pow(2,n)));	//Otherwise return x mod 2^n, the remainder when diving x by 2^n
+	return (x%(int)(pow(2,n)));	//Otherwise return x mod 2^n, the remainder when diving x by 2^n
 }
 
 int main () {
