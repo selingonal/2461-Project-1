@@ -9,7 +9,7 @@ int ques9(int x, int n, int c) {
     int cshift = c << n8;		// Set cshift equal to c shifted to the nth byte
     int z= (x & ~mask);			// Get everything but the nth byte of x
 
-    return (z  | cshift);		//Replace the nth byte in x with the nth byte in c
+    return (z  | cshift);		//Replace the nth byte in x with the 0th byte in c
 }
 
 int ans9(int x, int n, int c) {
@@ -25,6 +25,6 @@ int main () {
 	int c;
 	printf("Enter three integers: ");
 	scanf("%d %d %d", &x, &n, &c);
-	printf("\nques9(%d, %d, %d) replaces the nth byte in the %d with the nth byte in %d, giving %d\n", x,n,c,x,c,ques9(x,n,c));
-	printf("ans9(%d, %d, %d) replaces the nth byte in the %d with the nth byte in %d, giving %d\n", x,n,c,x,c,ans9(x,n,c));
+	printf("\nques9(%d, %d, %d) replaces the nth byte in the %d with the 0th byte in %d, giving %d\n", x,n,c,x,c,ques9(x,n,c));
+	printf("ans9(%d, %d, %d) replaces the nth byte in the %d with the 0th byte in %d, giving %d\n", x,n,c,x,c,ans9(x,n,c));
 }
