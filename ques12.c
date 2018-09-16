@@ -13,7 +13,7 @@ int ques12(int x, int m, int n) {
 }
 
 int ans12 (int x, int m, int n) {
-	if(x>=m && x=<n){
+	if(x>=m && x<=n){
 		return 1;
 	}
 	return 0;
