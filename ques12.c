@@ -25,8 +25,8 @@ int main () {
 	printf("ques12(7,10,3): %d\n", ques12(7,10,10));
 	printf("ques12(1,1,1): %d\n", ques12(1,1,10));
 
-	printf("ans12(%d,%d,%d): %d\n", 1,2,3,ans(1,2,3));
-	printf("ans12(%d,%d,%d): %d\n", 5,4,6,ans(5,4,6));
-	printf("ans12(%d,%d,%d): %d\n", 9,10,8,ans(9,10,8));
-	printf("ans12(%d,%d,%d): %d\n", 1,1,1,ans(1,1,1));
+	printf("ans12(%d,%d,%d): %d\n", 1,2,3,ans12(1,2,3));
+	printf("ans12(%d,%d,%d): %d\n", 5,4,6,ans12(5,4,6));
+	printf("ans12(%d,%d,%d): %d\n", 9,10,8,ans12(9,10,8));
+	printf("ans12(%d,%d,%d): %d\n", 1,1,1,ans12(1,1,1));
 }
