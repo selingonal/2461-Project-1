@@ -20,6 +20,9 @@ int ans12 (int x, int m, int n) {
 }
 
 int main () {
-	printf("ques12 ")
+	printf("ques12(1,2,3): %d\n", ques12(1,2,3)); 
+	printf("ques12(4,2,5): %d\n", ques12(4,2,5));
+	printf("ques12(7,10,3): %d\n", ques12(7,10,3));
+	printf("ques12(1,1,1): %d\n", ques12(1,1,1));
 
 }
