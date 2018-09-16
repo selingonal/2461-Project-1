@@ -1,5 +1,5 @@
 int ques14(int x) {
-  // 
+  
   int result = 0;
   int i;
 
