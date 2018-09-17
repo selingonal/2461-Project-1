@@ -64,24 +64,11 @@ int ans3(int x){
 
 
 /* QUESTION 4*/
-int exponential(int);
-
-int main() {
-    int n;
-    n = 32;
-    int y;
-    y = ques4(n); 
-    printf("%d", y); //y and z match 
-    int z;
-    z = ans4(n);
-    printf("%d", z); //y and z match 
-
-}
 int ques4(int n) {
-    int x = (!!n) << 31; //!!n is  1 if n is anything besides 0, if n is 0 then !!n is 0
-    x = x >> 31; 	//either a string of zeros or a string of ones
-    int y = (1 << 31); // equals 1 followed by a string of zeros 
-    y = y >> (n + (~0)); // y is right shifted by n added to a string of ones 
+    int x = (!!n) << 31;    //!!n is 1 if n is anything besides 0, if n is 0 then !!n is 0
+    x = x >> 31; 	          //either a string of zeros or a string of ones
+    int y = (1 << 31);      // equals 1 followed by a string of zeros 
+    y = y >> (n + (~0));    // y is right shifted by n added to a string of ones 
 
     return x & y; //result is ~(2^(32-n))
 }
@@ -89,10 +76,10 @@ int ques4(int n) {
 int ans4(int n)
 {
     int y = 32-n; // number to which 2 is raised 
-    int z = ~(exponential(y)); // take complement of 2^y to get result (z)
-    return z;
+    int z = pow(2,y); 
+    return ~z;    // take complement of 2^y to get result (z)
 }
-int exponential(int y)
+/*int exponential(int y)
 {
     int result=0;
     for (int i=0; i<y; i++)
@@ -100,7 +87,7 @@ int exponential(int y)
         result+= 2 * 2;
     }
     return result;
-}
+}*/
 
 
 /* QUESTION 5*/
@@ -148,7 +135,7 @@ int ques7(int x) {
 {
 	return log2(x&-x); //power to which 2 should be raised 
 }
-int exponential(int y)
+/*int exponential(int y)
 {
     int result=0;
     for (int i=0; i<y; i++)
@@ -156,7 +143,7 @@ int exponential(int y)
         result+= 2 * 2;
     }
     return result;
-}
+}*/
 
 int main()
 {
@@ -173,7 +160,7 @@ int ans7(int y, int x){
   int y; 
   //odd
   if (x % 2 == 1) {
-    y =1;
+    y = 1;
   }
   else{
      y = exponential(y); 
