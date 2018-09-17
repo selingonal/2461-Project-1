@@ -14,8 +14,8 @@ int ques9(int x, int n, int c) {
 }
 
 int ans9(int x, int n, int c) {
-	int mask = 255*pow(2,(8*n));	//Shift to nth byte using 2^(8n)
-	int new_byte = c*pow(2,(8*n));	//Shift 0th byte in c to nth byte
+	int mask = 255 << (8*n);	//Shift to nth byte using 2^(8n)
+	int new_byte = c << (8*n);	//Shift 0th byte in c to nth byte
 	return (new_byte | (x & ~mask));	//Replace nth byte in x with 0th byte in c and return
 }
 
