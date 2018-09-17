@@ -4,7 +4,6 @@
 #include <math.h>
 
 /* QUESTION 1*/
-
 int ques1(int x) {
     int z;
     int y  = ~x+1; //y is the 2's complement of x 
@@ -14,21 +13,15 @@ int ques1(int x) {
     return (z & 1); // only if x is 0 will this AND operation be true and return 1 
 
 }
-/* Answer to PART B: */
+
 // the function returns zero so long as the input isn't zero. In that case, it returns 1 
-int ques1(int x){
-    int y; 
+int ans1(int x){
     if (x==0)
     {
-     y =1; 
+      return 1; 
     }
-    else
-    {
-      y =0; 
-    }
-    return y; 
+    return 0;   
 }
-
 
 
 /* QUESTION 2*/
@@ -53,7 +46,6 @@ int ans2(int x){
 }
 
 
-
 /* QUESTION 3*/
 int ques3(int x){
     int y = !x;			//Set y to 1 if x is 0 and 0 otherwise
@@ -70,25 +62,9 @@ int ans3(int x){
 	return 0;		//Otherwise, return 0
 }
 
-int main () {
-	int x;
-	printf("Enter an integer: ");
-	scanf("%d", &x);
-	printf("\nques3(%d) returns 1 if x>0: %d\n", x, ques3(x));
-	printf("ans3(%d) returns 1 if x>0: %d\n", x, ans3(x));
-
-}
-
-
-
-
-
 
 /* QUESTION 4*/
-
 int exponential(int);
-int ans4(int);
-int ques4(int);
 
 int main() {
     int n;
@@ -109,7 +85,6 @@ int ques4(int n) {
 
     return x & y; //result is ~(2^(32-n))
 }
-/* Answer to Part B */ 
 
 int ans4(int n)
 {
@@ -128,7 +103,6 @@ int exponential(int y)
 }
 
 
-
 /* QUESTION 5*/
 int ques5(int x) {
   // if x is odd, result here is 1000...0, if x is even, result is 0000...0
@@ -137,7 +111,6 @@ int ques5(int x) {
     result = (result >> 31);
   // x returns -1 if odd and 0 if even
     return result;
-
 }
 
 int ans5(int x){
@@ -158,26 +131,19 @@ int ques6(void) {
     return word | word<<16;		//Return word plus word*2^16: 01010101010101010101010101010101 = 1431655765
 }
 
-int ans6(){
+int ans6(void){
 	return 1431655765;
 }
 
 
-int main () {
-	printf("ques6 simply returns the large numgber %d using 3 lines \n", ques6());
-	printf("ans6 returns the number %d in 1 line \n", ans6());
-}
-
-
-
 /* QUESTION 7*/
 int ques7(int x) {
-
+    //if x is even, rightmost one's place value is returned
+    //if x is odd, 1 is returned 
     return x & (~x+1);
 }
-/*Answer to Part B*/
-//if x is even, rightmost one's place value is returned
-//if x is odd, 1 is returned 
+
+
  int getRightOneBitPosition(int x)
 {
 	return log2(x&-x); //power to which 2 should be raised 
@@ -230,17 +196,15 @@ int ques8(int x) {
 int ans8(int x){
   if (x<0) return -1;
   else if(x==0) return 0;
-  else return 1;
+  return 1;
 }
-
-
 
 
 /* QUESTION 9*/
 int ques9(int x, int n, int c) {
-    int n8 = n << 3;			// Set n8 eqaul to 8n (byte shift)
+    int n8 = n << 3;		  	 // Set n8 eqaul to 8n (byte shift)
     //255 largest 8 bit number, shifting by 8 bits (1 byte) at a time
-    int mask = 0xff << n8;		// Set mask equal to 255 shifted to the nth byte
+    int mask = 0xff << n8;	// Set mask equal to 255 shifted to the nth byte
     int cshift = c << n8;		// Set cshift equal to c shifted to the nth byte
     int z= (x & ~mask);			// Get everything but the nth byte of x
 
@@ -248,12 +212,10 @@ int ques9(int x, int n, int c) {
 }
 
 int ans9(int x, int n, int c) {
-	int mask = 255 << (8*n);	//Shift 1 byte mask to nth byte
-	int new_byte = c << (8*n);	//Shift 0th byte in c to nth byte
+	int mask = 255 << (8*n);	        //Shift 1 byte mask to nth byte
+	int new_byte = c << (8*n);	      //Shift 0th byte in c to nth byte
 	return (new_byte | (x & ~mask));	//Replace nth byte in x with 0th yte in c and return
 }
-
-
 
 
 /* QUESTION 10*/
@@ -262,17 +224,12 @@ int ques10(int x) {
 	int z = (!(x+x));
 
     return y & z;
+    //will always return 0 
 }
-/* Answer to Part B*/ 
-//will always return 0 
 
 int ans10(int x){
-  x=0;
-  return x;
+  return 0;
 }
-
-
-
 
 
 /* QUESTION 11*/
@@ -300,16 +257,14 @@ int ans11(int x, int y){
 }
 
 
-
-
-
 /* QUESTION 12*/
 int ques12(int x, int m, int n) {
-    int a = ~m+1;	// Set a to 2's complement of m or -m
+    int a = ~m+1;	  // Set a to 2's complement of m or -m
     int b = ~x +1;	// Set b to 2's complement of n or -n
+    
     // Compare x to m and n
-    a = x + a;		// Set a to x + a or x-m 
-    b = b + n;		// Set b to b + n or n-x
+    a = x + a;		  // Set a to x + a or x-m 
+    b = b + n;		  // Set b to b + n or n-x
 
     // If x is between m and n return 1, otherwise return 0
     return !((a|b) >> 31);	// Return the inverse of the sign bit of bitwise a OR b 
@@ -319,13 +274,8 @@ int ans12 (int x, int m, int n) {
 	if(x>=m && x<=n){	//If x is between m and n (inlcusive) return 1
 		return 1;
 	}
-	return 0;			//Otherwise return 0
+	return 0;			   //Otherwise return 0
 }
-
-
-
-
-
 
 
 /* QUESTION 13*/
@@ -347,11 +297,10 @@ int ques13(int x) {
     x = (x & mask8) + ((x >> 8) & mask8);
     x = (x & mask16) + ((x >> 16) & mask16);
 
+    //Counts number of 1's in binary representation of x  
     return x;
 }
 
-/*Answer to Part B*/ 
-//counts number of 1's in binary representation 
 int ans13(int x) {
     int count=0;
     while (x)
@@ -372,10 +321,7 @@ int convert(int x)
     {
         return (x % 2 + 10 * convert(x / 2));
     }
-
-
-
-
+}
 
 
 /* QUESTION 14*/
@@ -401,9 +347,6 @@ int ans14(int x){
   
 }
 
-
-  
-  
   
 /* QUESTION 15*/
   
@@ -419,5 +362,134 @@ int ques15(int x, int n) {
 int ans15(int x, int n) {
 	return (x % (1 << n));	//Return x mod 2^n, the remainder when diving x by 2^n
 }
+
+
+int main () {
+  int param1;
+  int param2;
+  int param3;
+
+  //Question 1
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("Ques1 returns 1 if your number is 0, otherwise it returns 0: Ques1(%d) = %d\n", param1, ques1(param1));
+  printf("Ans1 returns 1 if your number is 0, otherwise it returns 0: Ans1(%d) = %d\n", param1, ans1(param1));
+  
+  //Question 2
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("Ques2 returns: %d, the absolute value of your number.\n\n", ques2(param1));
+  printf("Ans2 returns: %d, the absolute value of your number\n", ans2(param1));
+  
+  //Question 3
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("\nques3(%d) returns 1 if x>0: %d\n", param1, ques3(param1));
+  printf("ans3(%d) returns 1 if x>0: %d\n", param1, ans3(param1));
+  
+  //Question 4
+  
+  //Question 5
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  
+  if (ques5(param1) == 0 )
+    printf("The number you passed into QUES was even\n");
+  else
+    printf("The number you passed into QUES was odd\n");
+   
+  if (ans5(param1) == 0)
+    printf("The number you passed into ANS was even\n");
+  else
+    printf("The number you passed into ANS was odd\n");
+  
+  //Question 6
+  printf("ques6 simply returns the large numgber %d using 3 lines \n", ques6());
+  printf("ans6 returns the number %d in 1 line \n", ans6());
+  
+  //Question 7
+  
+  //Question 8
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param);
+
+  if (ques8(param1) == 1)
+    printf("The number you entered was positive.\n");
+  else if (ques8(param1) == -1)
+    printf("The number you entered was negative\n");
+  else 
+    printf("You entered 0.\n");
+   
+  if (ans8(param1) == 1)
+    printf("The number you entered was positive\n");
+  else if(ans8(param1) == -1)
+    printf("The number you entered was negative\n");
+  else 
+    printf("You entered 0.\n");
+  
+  //Question 9
+  printf("Enter three integers: ");
+  scanf("%d %d %d", &param1, &param2, &param3);
+  printf("\nques9(%d, %d, %d) replaces byte %d in %d with the 0 byte in %d, giving %d\n", param1,param2,param3,param2,param1,param3,ques9(param1,param2,param3));
+  printf("ans9(%d, %d, %d) replaces byte %d in %d with the 0 byte in %d, giving %d\n", param1,param2,param3,param2,param1,param3,ans9(param1,param2,param3));
+
+  //Question 10
+  printf("Enter a number: \n");
+  scanf("%d", &param1);
+  printf("Ques10 always returns 0, Ques10(%d) = %d", param1, ques10(param1));
+  printf("Ans10 always returns 0, Ans10(%d) = %d", param1, ans10(param1));
+
+  //Question 11
+  printf("Enter two numbers to be manipulated: \n");
+  scanf("%d %d", &param1, &param2);
+  
+  if(ques11(param1, param2) == -1){
+    printf("Your operation returned a positive number\n");
+  }
+  else{
+    printf("Negative number\n");
+  }
+  
+  if(ans11(param1, param2) == -1){
+    printf("The operation returned a positive number\n");
+  }
+  else{
+    printf("Negative number\n");
+  }
+
+  //Question 12
+  printf("Enter 3 integers: ");
+  scanf("%d %d %d", &param1, &param2, &param3);
+  printf("\nques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", &param1, &param2, &param3,&param1, &param2, &param3,ques12(&param1, &param2, &param3));
+  printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", &param1, &param2, &param3,&param1, &param2, &param3,ans12(&param1, &param2, &param3));
+
+  //Question 13
+
+
+  //Question 14
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+
+  if (ques14(param1) == 1){
+    printf("There is an odd number of 1's in the string.\n");
+  }
+  else{
+    printf("There is an even number of 1's in the string.\n");
+  }
+  if (ans14(param1) == 1){
+    printf("There is an odd number of 1's in the string.\n");
+  }
+  else{
+    printf("There is an even number of 1's in the string.\n");
+  }
+
+  //Question 15
+  printf("Enter two integers: ");
+  scanf("%d %d", &param1, &param2);
+  printf("\nques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", &param1, &param2,&param1, &param2,ques15(&param1, &param2));
+  printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", &param1, &param2,&param1, &param2,ans15(&param1, &param2));
+
+}
+
 
 
