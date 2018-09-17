@@ -131,7 +131,7 @@ int ques7(int x) {
 }
 
 
- int getRightOneBitPosition(int x)
+int getRightOneBitPosition(int x)
 {
 	return log2(x&-x); //power to which 2 should be raised 
 }
@@ -145,18 +145,18 @@ int ques7(int x) {
     return result;
 }*/
 
-int main()
+/*int main()
 {
-       	int y;
+  int y;
 	
 	int x = 6;
 	y = getRightOneBitPosition(x);
 	 
 	//getchar();
 	return 0;
-}
+}*/
 
-int ans7(int y, int x){
+int ans7(int x){
   int y; 
   //odd
   if (x % 2 == 1) {
