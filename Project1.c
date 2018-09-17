@@ -163,7 +163,7 @@ int ans7(int x){
     y = 1;
   }
   else{
-     y = exponential(y); 
+     y = pow(2,y); 
   }
   return y; 
 }
