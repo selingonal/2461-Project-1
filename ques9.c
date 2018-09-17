@@ -13,9 +13,8 @@ int ques9(int x, int n, int c) {
 }
 
 int ans9(int x, int n, int c) {
-	int byte = 8*n;				//Set byte
-	int mask = 255 << byte;		//Shift 1 byte mask to nth byte
-	int new_byte = c << byte;	//Shift 0th byte in c to nth byte
+	int mask = 255 << (8*n);	//Shift 1 byte mask to nth byte
+	int new_byte = c << (8*n);	//Shift 0th byte in c to nth byte
 	return (new_byte | (x & ~mask));	//Replace nth byte in x with 0th yte in c and return
 }
 
