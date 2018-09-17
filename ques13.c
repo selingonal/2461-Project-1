@@ -41,3 +41,4 @@ int convert(int x)
     {
         return (x % 2 + 10 * convert(x / 2));
     }
+}

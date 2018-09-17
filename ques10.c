@@ -8,6 +8,9 @@ int ques10(int x) {
 //will always return 0 
 
 int ans10(int x){
-  x=0;
-  return x;
+  return 0;
+}
+
+int main() {
+	
 }
