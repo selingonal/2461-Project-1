@@ -14,7 +14,7 @@ int ques1(int x) {
 
 }
 
-// the function returns zero so long as the input isn't zero. In that case, it returns 1 
+// The function returns zero so long as the input isn't zero. In that case, it returns 1 
 int ans1(int x){
     if (x==0)
     {
@@ -79,15 +79,6 @@ int ans4(int n)
     int z = pow(2,y); 
     return ~z;    // take complement of 2^y to get result (z)
 }
-/*int exponential(int y)
-{
-    int result=0;
-    for (int i=0; i<y; i++)
-    {
-        result+= 2 * 2;
-    }
-    return result;
-}*/
 
 
 /* QUESTION 5*/
@@ -130,32 +121,6 @@ int ques7(int x) {
     return x & (~x+1);
 }
 
-
-/*int getRightOneBitPosition(int x)
-{
-	return log2(x&-x); //power to which 2 should be raised 
-}
-int exponential(int y)
-{
-    int result=0;
-    for (int i=0; i<y; i++)
-    {
-        result+= 2 * 2;
-    }
-    return result;
-}*/
-
-/*int main()
-{
-  int y;
-	
-	int x = 6;
-	y = getRightOneBitPosition(x);
-	 
-	//getchar();
-	return 0;
-}*/
-
 int ans7(int x){
     int k;
     int y;
@@ -170,7 +135,6 @@ int ans7(int x){
     }
     return pow(2,y);
 }
-
 
 
 /* QUESTION 8*/
@@ -300,29 +264,18 @@ int ans13(int x) {
     }
     return count;
 }
-//decimal to binary conversion
-int convert(int x)
-{
-    if (x == 0)
-    {
-        return 0;
-    }
-    else
-    {
-        return (x % 2 + 10 * convert(x / 2));
-    }
-}
 
 
 /* QUESTION 14*/
  int ques14(int x) {
   
-  int result = 0;
+  int result = 0;             
   int i;
 
-  for (i = 0; i < 32; i++)
-   result ^=  (x >> i) & 0x1;
-
+  for (i = 0; i < 32; i++)    //Iterates through each bit
+   result ^=  (x >> i) & 0x1; //Gets last bit of x, xor= into result
+  //If result is 0, it becomes 1, if its 1 it becomes 0
+  //Determines whether the number of 1's in the binary string is even or odd
    return result;
 }
 
@@ -339,7 +292,6 @@ int ans14(int x){
 
   
 /* QUESTION 15*/
-  
 int ques15(int x, int n) {
     /* for ques15 only, assume n is not a negative number  */
 
@@ -353,7 +305,7 @@ int ans15(int x, int n) {
 	return (x % (1 << n));	//Return x mod 2^n, the remainder when diving x by 2^n
 }
 
-
+/*Examples in main()*/
 int main () {
   int param1;
   int param2;
@@ -374,14 +326,14 @@ int main () {
   //Question 3
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
-  printf("\nques3(%d) returns 1 if x>0: %d\n", param1, ques3(param1));
-  printf("ans3(%d) returns 1 if x>0: %d\n", param1, ans3(param1));
+  printf("Ques3 returns 1 if x>0: %d\n", ques3(param1));
+  printf("Ans3 returns 1 if x>0: %d\n", ans3(param1));
   
   //Question 4
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
-  printf("ques4(%d) = %d\n", param1, ques4(param1));
-  printf("ans4(%d) = %d\n", param1, ans4(param1));
+  printf("Ques4 returns ~(2^(32-%d)): %d\n", param1, ques4(param1));
+  printf("Ans4(%d) returns %d\n", param1, ans4(param1));
   
   //Question 5
   printf("Enter a number to be manipulated: \n");
@@ -404,8 +356,8 @@ int main () {
   //Question 7
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
-  printf("ques7(%d) = %d\n", param1, ques7(param1));
-  printf("ans7(%d) = %d\n", param1, ans7(param1));
+  printf("Ques7 returns the place of the rightmost 1 in the binary string: %d\n", ques7(param1));
+  printf("Ans7(%d): %d\n", param1, ans7(param1));
   
   //Question 8
   printf("Enter a number to be manipulated: \n");
@@ -449,16 +401,16 @@ int main () {
   }
 
   //Question 12
-  printf("Enter 3 integers: ");
+  printf("Enter 3 integers: \n");
   scanf("%d %d %d", &param1, &param2, &param3);
-  printf("\nques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", param1, param2, param3, param1, param2, param3,ques12(param1, param2, param3));
-  printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", param1, param2, param3,param1, param2, param3,ans12(param1, param2, param3));
+  printf("Ques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", param1, param2, param3, param1, param2, param3,ques12(param1, param2, param3));
+  printf("Ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", param1, param2, param3,param1, param2, param3,ans12(param1, param2, param3));
 
   //Question 13
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
-  printf("ques13 returns the number of ones in the binary string: %d\n", ques13(param1));
-  printf("ans13 returns the number of ones in the binary string:  %d\n", ans13(param1));
+  printf("Ques13 returns the number of ones in the binary string: %d\n", ques13(param1));
+  printf("Ans13 returns the number of ones in the binary string:  %d\n", ans13(param1));
 
   //Question 14
   printf("Enter a number to be manipulated: \n");
@@ -478,10 +430,10 @@ int main () {
   }
 
   //Question 15
-  printf("Enter two integers: ");
+  printf("Enter two integers: \n");
   scanf("%d %d", &param1, &param2);
-  printf("\nques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ques15(param1, param2));
-  printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ans15(param1, param2));
+  printf("Ques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ques15(param1, param2));
+  printf("Ans15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ans15(param1, param2));
 
 }
 
