@@ -1,7 +1,7 @@
 int ques1(int x) {
     int z;
-    int y  = ~x+1;
-    z= (~(y|x));
+    int y  = ~x+1; //y is the 2's complement of x 
+    z= (~(y|x)); // OR of original and its 2's complement then take the complement 
     z = (z >> 31);
 
     return (z & 1);
