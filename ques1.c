@@ -10,18 +10,9 @@ int ques1(int x) {
 /* Answer to PART B: */
 // the function returns zero so long as the input isn't zero. In that case, it returns 1 
 int ans1(int x){
-    int y; 
     if (x==0)
     {
-     y =1; 
+      return 1; 
     }
-    else
-    {
-      y =0; 
-    }
-    return y; 
-}
-
-int main() {
-
+    return 0;   
 }
