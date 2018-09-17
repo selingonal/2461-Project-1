@@ -131,11 +131,11 @@ int ques7(int x) {
 }
 
 
-int getRightOneBitPosition(int x)
+/*int getRightOneBitPosition(int x)
 {
 	return log2(x&-x); //power to which 2 should be raised 
 }
-/*int exponential(int y)
+int exponential(int y)
 {
     int result=0;
     for (int i=0; i<y; i++)
@@ -157,15 +157,18 @@ int getRightOneBitPosition(int x)
 }*/
 
 int ans7(int x){
-  int y; 
-  //odd
-  if (x % 2 == 1) {
-    y = 1;
-  }
-  else{
-     y = pow(2,y); 
-  }
-  return y; 
+    int k;
+    int y;
+    y = log2(x&-x)+1; //power to which 2 should be raised
+    if (y !=1)
+    {
+     y = y-1;
+    }
+    //odd
+    if (x % 2 == 1) {
+        return 1;
+    }
+    return pow(2,y);
 }
 
 
@@ -292,7 +295,7 @@ int ans13(int x) {
     int count=0;
     while (x)
     {
-        count += x & 1; //adds to the count only if there's a 1 present (AND operator)
+        count += (x & 1); //adds to the count only if there's a 1 present (AND operator)
         x >>= 1;        //shift and assign new x position  
     }
     return count;
@@ -365,7 +368,7 @@ int main () {
   //Question 2
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
-  printf("Ques2 returns: %d, the absolute value of your number.\n\n", ques2(param1));
+  printf("Ques2 returns: %d, the absolute value of your number.\n", ques2(param1));
   printf("Ans2 returns: %d, the absolute value of your number\n", ans2(param1));
   
   //Question 3
@@ -375,6 +378,10 @@ int main () {
   printf("ans3(%d) returns 1 if x>0: %d\n", param1, ans3(param1));
   
   //Question 4
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("ques4(%d) = %d\n", param1, ques4(param1));
+  printf("ans4(%d) = %d\n", param1, ans4(param1));
   
   //Question 5
   printf("Enter a number to be manipulated: \n");
@@ -395,6 +402,10 @@ int main () {
   printf("ans6 returns the number %d in 1 line \n", ans6());
   
   //Question 7
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("ques7(%d) = %d\n", param1, ques7(param1));
+  printf("ans7(%d) = %d\n", param1, ans7(param1));
   
   //Question 8
   printf("Enter a number to be manipulated: \n");
@@ -423,8 +434,8 @@ int main () {
   //Question 10
   printf("Enter a number: \n");
   scanf("%d", &param1);
-  printf("Ques10 always returns 0, Ques10(%d) = %d", param1, ques10(param1));
-  printf("Ans10 always returns 0, Ans10(%d) = %d", param1, ans10(param1));
+  printf("Ques10 always returns 0, Ques10(%d) = %d\n", param1, ques10(param1));
+  printf("Ans10 always returns 0, Ans10(%d) = %d\n", param1, ans10(param1));
 
   //Question 11
   printf("Enter two numbers to be manipulated: \n");
@@ -432,13 +443,6 @@ int main () {
   
   if(ques11(param1, param2) == -1){
     printf("Your operation returned a positive number\n");
-  }
-  else{
-    printf("Negative number\n");
-  }
-  
-  if(ans11(param1, param2) == -1){
-    printf("The operation returned a positive number\n");
   }
   else{
     printf("Negative number\n");
@@ -451,7 +455,10 @@ int main () {
   printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", param1, param2, param3,param1, param2, param3,ans12(param1, param2, param3));
 
   //Question 13
-
+  printf("Enter a number to be manipulated: \n");
+  scanf("%d", &param1);
+  printf("ques13 returns the number of ones in the binary string: %d\n", ques13(param1));
+  printf("ans13 returns the number of ones in the binary string:  %d\n", ans13(param1));
 
   //Question 14
   printf("Enter a number to be manipulated: \n");

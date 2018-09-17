@@ -23,28 +23,26 @@ int exponential(int y)
     }
     return result; // the value at the correct location
 }
-int ans7(int y, int x){
+int ans7(int x){
     int k;
+    int y;
+    y = log2(x&-x)+1; //power to which 2 should be raised
+    if (y !=1)
+    {
+     y = y-1;
+    }
     //odd
     if (x % 2 == 1) {
-        k =1;
+        return 1;
     }
-    else{
-        k = exponential(y);
-    }
-    return k;
+    return pow(2,y);
 }
 
 int main()
 {
     int x;
     x = 6; //even number that isn't a power of 2 
-    int y;
-    y = getRightOneBitPosition(x);
-    if (y !=1)
-    {
-     y = y-1;
-    }
+    
     int z;
     int q;
     q = ques7(x);
