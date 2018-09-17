@@ -33,8 +33,9 @@ int ans4(int n)
 }
 int exponential(int y)
 {
+    int i;
     int result=0;
-    for (int i=0; i<y; i++)
+    for (i=0; i<y; i++)
     {
         result+= 2 * 2;
     }
