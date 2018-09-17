@@ -398,7 +398,7 @@ int main () {
   
   //Question 8
   printf("Enter a number to be manipulated: \n");
-  scanf("%d", &param);
+  scanf("%d", &param1);
 
   if (ques8(param1) == 1)
     printf("The number you entered was positive.\n");
@@ -447,8 +447,8 @@ int main () {
   //Question 12
   printf("Enter 3 integers: ");
   scanf("%d %d %d", &param1, &param2, &param3);
-  printf("\nques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", &param1, &param2, &param3,&param1, &param2, &param3,ques12(&param1, &param2, &param3));
-  printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", &param1, &param2, &param3,&param1, &param2, &param3,ans12(&param1, &param2, &param3));
+  printf("\nques12(%d, %d, %d) determines whether %d is between %d and %d: %d\n", param1, param2, param3, param1, param2, param3,ques12(param1, param2, param3));
+  printf("ans12(%d, %d, %d) also determines whether %d is between %d and %d: %d\n", param1, param2, param3,param1, param2, param3,ans12(param1, param2, param3));
 
   //Question 13
 
@@ -473,8 +473,8 @@ int main () {
   //Question 15
   printf("Enter two integers: ");
   scanf("%d %d", &param1, &param2);
-  printf("\nques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", &param1, &param2,&param1, &param2,ques15(&param1, &param2));
-  printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", &param1, &param2,&param1, &param2,ans15(&param1, &param2));
+  printf("\nques15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ques15(param1, param2));
+  printf("anss15(%d, %d) returns the remainder when dividing %d by 2^%d: %d\n", param1, param2,param1, param2,ans15(param1, param2));
 
 }
 
