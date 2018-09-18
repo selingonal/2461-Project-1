@@ -382,7 +382,11 @@ int main () {
   printf("Enter a number to be manipulated: \n");
   scanf("%d", &param1);
   printf("Ques7 returns the place of the rightmost 1 in the binary string: %d\n", ques7(param1));
-  printf("Ans7(%d): %d\n", param1, ans7(param1));
+  int y = getRightOneBitPosition(param1);
+  if (y!= 1){
+       y = y-1;
+    }
+  printf("Ans7(%d): %d\n", param1, ans7(y,param1));
   
   //Question 8
   printf("Enter a number to be manipulated: \n");
