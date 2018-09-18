@@ -76,12 +76,11 @@ int ques4(int n) {
 }
 
 int ans4(int n)
-{
-    int y = 32-n; // number to which 2 is raised 
-    int z = pow(2,y); 
-    return ~z;    // take complement of 2^y to get result (z)
-}
-
+ {
+     int y = 32-n; // number to which 2 is raised
+     double z = pow(2,y);
+     return ~((int)z-1);    // take complement of 2^y to get result and subtract 1 (z)
+ }
 
 /* QUESTION 5*/
 int ques5(int x) {
