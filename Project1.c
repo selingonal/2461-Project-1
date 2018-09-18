@@ -1,3 +1,9 @@
+/*
+Group No: 4
+Team Members: Selin Onal, Tuhina Dasgupta, Sarah Morin
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
