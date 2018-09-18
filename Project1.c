@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+//ANSWER 7 requires this compilation instruction: gcc -o Project1 -std=c99 Project1.c -lm
 
 /* QUESTION 1*/
 int ques1(int x) {
