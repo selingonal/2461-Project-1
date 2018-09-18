@@ -124,20 +124,37 @@ int ques7(int x) {
     return x & (~x+1);
 }
 
-int ans7(int x){
-    int k;
-    int y;
-    y = log2(x&-x)+1; //power to which 2 should be raised
-    if (y !=1)
+int getRightOneBitPosition(int x)
+{
+    return log2(x&-x)+1; //power to which 2 should be raised
+}
+int exponential(int y)
+{
+    int result=0;
+    int i; 
+    for (i=1; i<y; i++)
     {
-     y = y-1;
+        result+= 2 * 2;
     }
+    if (y ==1)
+    {
+        result = 2;
+    }
+    return result; // the value at the correct location
+}
+
+int ans7(int y, int x){
+    int k;
     //odd
     if (x % 2 == 1) {
-        return 1;
+        k =1;
     }
-    return pow(2,y);
+    else{
+        k = exponential(y);
+    }
+    return k;
 }
+
 
 
 /* QUESTION 8*/
