@@ -41,6 +41,7 @@ int ques2(int x) {
 }
 
 int ans2(int x){
+  // basic C command to handle absolute value
   x = abs(x);
   return x;
 }
@@ -92,6 +93,7 @@ int ques5(int x) {
 }
 
 int ans5(int x){
+  // Conditions determine whether c is even or odd through modular arithmatic
   if(x%2 == 0){
     return 0;
   }
@@ -148,9 +150,10 @@ int ques8(int x) {
 }
 
 int ans8(int x){
-  if (x<0) return -1;
-  else if(x==0) return 0;
-  return 1;
+
+  if (x<0) return -1; //returns -1 for negative numbers
+  else if(x==0) return 0; // returns 0 for 0 only
+  else return 1; // returns 1 for positive numbers
 }
 
 
@@ -196,7 +199,7 @@ int ques11(int x, int y) {
   /*
     the return statement has a lot of operators
     here's how they break down:
-    will return -1 if:
+    will return 1 if:
         - x is negative and y is positive
         - y is positive and the absolute value of -x is less than y
         - y is negative and the absolute value of +x is less than y
@@ -206,7 +209,8 @@ int ques11(int x, int y) {
 }
 
 int ans11(int x, int y){
-  if (x < y || abs(x) < y || (x < 0 && y > 0) ) return -1;
+  // I've made the function return these conditions specifically because these are the cases I defined will return 1.
+  if (x < y || abs(x) < y || (x < 0 && y > 0) ) return 1;
   else return 0;
 }
 
@@ -280,11 +284,14 @@ int ans13(int x) {
 }
 
 int ans14(int x){
+  // counts the number of 1's in the binary string representation of the number
   int count = 0; 
   while(x){
     count += x&1;
     x >>=1;
   }
+  // here we check the count to see if there is an even or odd amount of 1's in the string
+  //returns 1 or 0 accordingly 
   if (count % 2 == 1) return 1;
   else return 0;
   
@@ -393,12 +400,19 @@ int main () {
   printf("Enter two numbers to be manipulated: \n");
   scanf("%d %d", &param1, &param2);
   
-  if(ques11(param1, param2) == -1){
-    printf("Your operation returned a positive number\n");
+  if(ques11(param1, param2) == 1){
+    printf("Your operation returned a positive output\n");
   }
   else{
-    printf("Negative number\n");
+    printf("Your operation returned negative output\n");
   }
+  if(ans11(param1, param2) == 1){
+    printf("Your operation returned a positive output\n");
+  }
+  else{
+    printf("Your operation returned negative output\n");
+  }
+
 
   //Question 12
   printf("Enter 3 integers: \n");
